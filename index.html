@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB" crossorigin="anonymous">
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+</head>
+
+<body>
+
+	<!-- first create a layout for mobile device that has a header and a section that contains two divs. One side will contain a slider and the other side will contain data
+
+	set up the header to have a logo, title, and span to hold the value of a monthly payment
+
+	on the top of the bottm section have a table that displays a pie chart and next to it have a table of informatino
+
+	under that section have sliders set up for the user to move left and right in order to change values to ultimately change the monthly payment as a slider moves
+ -->
+
+
+	<div class="col-lg-12 header">
+
+		<div class="header-info-container">
+			
+			<img src="#" alt="logo-picture" style="height:100px">
+
+			<h2>Monthly Payment</h2>
+
+			<h1><span id="monthly-calculation">calculation will go here</span></h1>
+
+		</div>
+
+	</div>
+
+
+
+
+	<div class="col-lg-12 section">
+
+		<div class="slider-area">
+			<ul>
+				<li>
+				<label>
+					<h3>test1</h3>
+					</label>
+					<span class="data-number-slider" id="test1">$90</span>
+					
+					<br>
+
+					<input type="range" min="1" max="90" class="slider" id="one">
+				</li>
+				<li>
+
+				<label>
+					<h3>test2</h3>
+				</label>
+					<span class="data-number-slider" id="test2">$100</span>
+					
+					<br>
+
+					<input type="range" min="1" max="100" class="slider" id="two">
+				</li>
+				<li>
+				
+
+				<label>
+					<h3>test3</h3>
+					</label>
+					<span class="data-number-slider" id="test3">$110</span>
+				
+					<br>
+					<input type="range" min="1" max="110" class="slider" id="three">
+
+				</li>
+				<li>
+
+				<label>
+					<h3>test4</h3>
+					</label>
+					<span class="data-number-slider" id="test4">$120</span>
+					
+					<br>
+					<input type="range" min="1" max="120" class="slider" id="four">
+
+			</li>
+			<li>
+
+				<label>
+					<h3>test5</h3>
+					</label>
+					 <span class="data-number-slider" id="test5">$130</span>
+					
+						<br>
+					<input type="range" min="1" max="130" class="slider" id="five">
+
+				</li>
+			</ul>
+
+		</div>
+
+	</div>
+
+
+<script type="text/javascript" src="./index.js">
+	
+
+
+
+</script>
+	
+</body>
+</html>
