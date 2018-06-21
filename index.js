@@ -4,7 +4,7 @@ $(".slider").on("input",function(e){
  
 	switch(id){
 		case "one":
-		$("#one").html("$"+value)
+		$("#test1").html("$"+value)
 			calculatePayment()
 		break;
 
@@ -14,23 +14,19 @@ $(".slider").on("input",function(e){
 		break;
 
 		case "three":
-		$("#test3").html("$"+value)
+		$("#test3").html(value + "Years")
 			calculatePayment()
 		break;
 
 		case "four":
-		$("#test4").html("$"+value)
-			calculatePayment()
-		break;
-
-		case "five":
-		$("#test5").html("$"+value)
+		$("#test4").html(value+" %")
 			calculatePayment()
 		break;
 
 		}
 	})
 
+//this function gathers the values of each range and places them in a variable
 function calculatePayment(){
 
 	let loanAmount= $("#one").val();
@@ -38,10 +34,21 @@ function calculatePayment(){
 	let term = $("#three").val();
 	let interestRate =$("#four").val();
 
-let totalLoan = (loanAmount - tradeIn)
+//calculate rate on monthly basis
+	let r = (interestRate/100)/12
 
-$("#monthly-calculation").html("$"+totalLoan)
-	// let totalLoan = Number(loanAmount) = Number(tradeIn);
-	// console.log(typeof(totalLoan));
-	// console.log(totalLoan) 
+//convert years of loan into months	
+	let monthTerm = term *12;
+
+//formula for caluculating monthly payment
+	let totalLoan = (loanAmount - tradeIn)
+	let formulaPart1= (r*(totalLoan))
+	let formulaPart2= 1-(1+r)**-monthTerm
+	let loanPayment = formulaPart1/formulaPart2;
+	
+
+
+//populate total monthly payment ID monthly-calculator and leave show only two decical places
+$("#monthly-calculation").html("$"+loanPayment.toFixed(2))
+
 }
