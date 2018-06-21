@@ -1,6 +1,11 @@
 .header{
-	background:blue;
+	/*background:blue;*/
+	border-bottom:2px solid black;
 	text-align: center;
+	padding:20px 0 20px 0;
+}
+.section{
+	margin:40px 0 40px 0;
 }
 .table-area ul li{
 	list-style-type: none;
@@ -71,6 +76,7 @@ img{
 .slider::-webkit-slider-thumb {
     -webkit-appearance: none; /* Override default look */
     appearance: none;
+    border-radius: 50%;
     width: 25px; 
     height: 25px; /* Slider handle height */
     background: green; /* Green background */
