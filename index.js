@@ -34,6 +34,10 @@ function calculatePayment(){
 	let term = $("#three").val();
 	let interestRate =$("#four").val();
 
+
+let loanPayment;
+
+
 //calculate rate on monthly basis
 	let r = (interestRate/100)/12
 
@@ -44,8 +48,21 @@ function calculatePayment(){
 	let totalLoan = (loanAmount - tradeIn)
 	let formulaPart1= (r*(totalLoan))
 	let formulaPart2= 1-(1+r)**-monthTerm
-	let loanPayment = formulaPart1/formulaPart2;
+	 loanPayment = formulaPart1/formulaPart2;
+
+//conditions with rates and terms
+
+	if((interestRate == 0) &&(term == 0)) {
+		loanPayment = totalLoan;
+	}
 	
+	else if ((interestRate == 0) &&(term !== 0)){
+		loanPayment = totalLoan/monthTerm;
+		// alert(term)
+	}
+	else if((interestRate !== 0) &&(term == 0)){
+		loanPayment = totalLoan
+	}
 
 
 //populate total monthly payment ID monthly-calculator and leave show only two decical places
