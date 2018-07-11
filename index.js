@@ -4,22 +4,22 @@ $(".slider").on("input",function(e){
  
 	switch(id){
 		case "one":
-		$("#test1").html("$"+value)
+		$("#test1").html("<h3>"+"$"+value+"</h3>")
 			calculatePayment()
 		break;
 
 		case 'two':
-		$("#test2").html("$"+value);
+		$("#test2").html("<h3>"+"$"+value+"</h3>");
 			calculatePayment()
 		break;
 
 		case "three":
-		$("#test3").html(value + "Years")
+		$("#test3").html("<h3>"+value + " Years")
 			calculatePayment()
 		break;
 
 		case "four":
-		$("#test4").html(value+" %")
+		$("#test4").html("<h3>"+value+" %"+"</h3>")
 			calculatePayment()
 		break;
 

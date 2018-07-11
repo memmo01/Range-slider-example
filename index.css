@@ -1,8 +1,12 @@
+body{
+	background-color:aliceblue;
+}
 .header{
-	/*background:blue;*/
+	background:#00a98f;
 	border-bottom:2px solid black;
 	text-align: center;
 	padding:20px 0 20px 0;
+	color:white;
 }
 .section{
 	margin:40px 0 40px 0;
@@ -92,4 +96,11 @@ img{
     opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
     -webkit-transition: .2s; /* 0.2 seconds transition on hover */
     transition: opacity .2s;
+}
+.slider-area input[type="range"]{
+	margin-bottom:30px;
+}
+.header-info-container h1{
+font-family: 'Playfair Display', serif;
+text-decoration: underline;
 }
